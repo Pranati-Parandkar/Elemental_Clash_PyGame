@@ -20,8 +20,6 @@ GRAY = (200, 200, 200)
 GREEN = (0, 200, 0)
 YELLOW = (255, 255, 0)
 
-blazing_font = pygame.font.Font("assets/fonts/blazingfont.ttf", 50)
-
 # Fonts
 font = pygame.font.SysFont("arial", 32, bold=True)
 small_font = pygame.font.SysFont("arial", 24)
@@ -217,7 +215,7 @@ while running:
     screen.blit(bg_image, (0, 0))
 
     if show_welcome:
-        welcome = blazing_font.render("Gear Up for the Ultimate Battle with Elemental Clash", True, WHITE)
+        welcome = font.render("Gear Up for the ultimate Battle with Elemental Clash", True, WHITE)
         screen.blit(welcome, (WIDTH // 2 - welcome.get_width() // 2, HEIGHT // 3))
         start_button.draw(screen)
 
@@ -327,4 +325,3 @@ while running:
 
 pygame.quit()
 sys.exit()
-
